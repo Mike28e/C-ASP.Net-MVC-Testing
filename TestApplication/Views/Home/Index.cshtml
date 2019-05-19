@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Styles/Main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="split">
+        <div class="left">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Class</th>
+                </tr>
+                @foreach (var professor in Model.Professor)
+                {
+                    <tr>
+                        @if (professor.FirstName == "Michael")
+                        {
+                            <td style="color: blue;">@professor.FirstName</td>
+                            <td style="color: blue;">@professor.LastName</td>
+                            <td style="color: blue;">@professor.Class</td>
+                        }
+                        else
+                        {
+                            <td>@professor.FirstName</td>
+                            <td>@professor.LastName</td>
+                            <td>@professor.Class</td>
+                        }
+                    </tr>
+                }
+            </table>
+
+        </div>
+
+        <div class="right">
+            <div class="content-Box">
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Class</th>
+                    </tr>
+                    @foreach (var student in Model.Student)
+                    {
+                        <tr>
+                            @if (student.FirstName == "Mike")
+                            {
+                                <td style="color: blue;">@student.FirstName</td>
+                                <td style="color: blue;">@student.LastName</td>
+                                <td style="color: blue;">@student.Class</td>
+                            }
+                            else
+                            {
+                                <td>@student.FirstName</td>
+                                <td>@student.LastName</td>
+                                <td>@student.Class</td>
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+
+
+            <div class="content-Box">
+                <img src="http://ascenthealthcenter.com/wp-content/uploads/2018/04/photo-coming-placeholder-400x400w-300x300.jpg" alt="Image result for image placeholder" />
+            </div>
+
+            <div class="content-Box">
+                <img src="https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image" alt="image" />
+            </div>
+
+            <div class="content-Box">
+                <img src="http://ascenthealthcenter.com/wp-content/uploads/2018/04/photo-coming-placeholder-400x400w-300x300.jpg" alt="Image result for image placeholder" />
+            </div>
+        </div>
+    </div>
+    <br style="clear:both;" />
+
+    
+
+    <br />
+</body>
+</html>

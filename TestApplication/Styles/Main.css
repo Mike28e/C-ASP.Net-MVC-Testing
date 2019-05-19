@@ -1,0 +1,53 @@
+﻿body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    min-width: 800px;
+}
+
+table {
+    border-spacing: 30px 10px;
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px black solid;
+}
+
+
+
+/* Split the screen in half */
+.split {
+    z-index: 1;
+   
+    white-space: nowrap;
+  
+    min-width: 800px;
+    
+}
+
+/* Control the left side */
+.left {
+    float: left;
+    width: 50%;
+    min-width: 400px;
+    
+}
+
+/* Control the right side */
+.right {
+    float: right;
+    width: 50%;
+    min-width: 400px;
+
+}
+
+.content-Box {
+    margin-bottom: 40px;
+    padding: 0;
+    float: right;
+    clear: both;
+}
+    .content-Box img {
+        border: 2px black solid;
+        vertical-align: bottom;
+    }
